@@ -1,0 +1,4 @@
+dockr build -t yacr:1.0 .
+docker run --rm -d -p 5969:8080 -v /mnt/1tb/DL:/comics --name=yacs yacr:1.0
+docker exec yacs /app/YACReaderLibraryServer create-library <library-name> /comics
+docker exec yacs /app/YACReaderLibraryServer update-library /comics

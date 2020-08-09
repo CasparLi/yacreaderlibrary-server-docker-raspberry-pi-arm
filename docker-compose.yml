@@ -1,0 +1,10 @@
+version: '3.5'
+services:
+  yacs:
+    build: .
+    container_name: yacs
+    restart: unless-stopped
+    ports:
+      - 5969:8080
+    volumes:
+      - /mnt/1tb/DL/manga:/comics
